@@ -1,0 +1,32 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="Bingo.Winner"
+	x:Name="Window"
+	Title="Winner"
+	Width="640" Height="480" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+
+	<Grid x:Name="LayoutRoot">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="80*"/>
+				<RowDefinition Height="20*"/>
+			</Grid.RowDefinitions>
+			<Viewbox Margin="0">
+				<Label x:Name="bingo" Content="Bingo!!" FontFamily="Arial Black"/>
+			</Viewbox>
+			<Grid Margin="0" Grid.Row="1" MinWidth="43">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<Viewbox Margin="0">
+					<Button x:Name="confirm_button" Content="Confirmar" FontFamily="Arial Black" Margin="20,0" Click="confirm_button_Click" />
+				</Viewbox>
+				<Viewbox Margin="0" Grid.Column="1">
+					<Button x:Name="cancel_button" Content="Cancelar" FontFamily="Arial" Padding="0" Margin="20,0" Click="cancel_button_Click" />
+				</Viewbox>
+			</Grid>
+		</Grid>
+	</Grid>
+</Window>
